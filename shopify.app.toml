@@ -1,0 +1,27 @@
+# Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
+
+name = "get-external-address"
+client_id = "c79b764c0f00c6d2fc25b4f1e6b232a7"
+application_url = "https://cheers-exercises-items-hansen.trycloudflare.com"
+embedded = true
+
+[access_scopes]
+# Learn more at https://shopify.dev/docs/apps/tools/cli/configuration#access_scopes
+scopes = "write_products"
+
+[auth]
+redirect_urls = [
+  "https://cheers-exercises-items-hansen.trycloudflare.com/auth/callback",
+  "https://cheers-exercises-items-hansen.trycloudflare.com/auth/shopify/callback",
+  "https://cheers-exercises-items-hansen.trycloudflare.com/api/auth/callback"
+]
+
+[webhooks]
+api_version = "2023-07"
+
+[pos]
+embedded = false
+
+[build]
+automatically_update_urls_on_dev = true
+dev_store_url = "get-pickup-locations-externally.myshopify.com"
